@@ -1,2 +1,18 @@
-# taverna-alexandros-paros
-Website project for Taverna Alexandros, Parikia Paros
+# Ταβέρνα Αλέξανδρος
+
+## Στ. Επ.
+- Διεύθυνση: Παροικιά, Πάρος, Ελλάδα
+- Τηλέφωνο: 22840 24841
+- Email: delskitchenparos@gmail.com
+
+## Γιατί χρειάζεται το site
+Ισχυρή τουριστική ζήτηση στην Πάρο, παραθαλάσσια εμπειρία και ανάγκη να βρίσκουν οι επισκέπτες μενού, τοποθεσία και επικοινωνία από ένα σημείο.
+
+## Website quality
+No standalone website found; Facebook presence
+
+## Lead score
+94/100
+
+## Τιμή site
+€250 (εφάπαξ)
