@@ -1,127 +1,250 @@
-html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ταβέρνα Αλέξανδρος | Παροικιά, Πάρος, Ελλάδα</title>
-    <meta name="description" content="Ισχυρή τουριστική ζήτηση στην Πάρο, παραθαλάσσια εμπειρία και ανάγκη να βρίσκουν οι επισκέπτες μενού, τοποθεσία και επικοινωνία από ένα σημείο.">
-    <style>
-        :root {
-            --primary-color: #1d1b18;
-            --secondary-color: #fffdf9ef;
-            --bg-color: #f6f2ea;
-        }
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg-color);color:var(--primary-color);line-height:1.6}
-        nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 7%;background:var(--secondary-color);backdrop-filter:blur(10px);border-bottom:1px solid #e7dfd2}
-        .hero{min-height:78vh;display:grid;align-items:center;padding:90px 7%;background:linear-gradient(135deg,#e9dfcf,#fbfaf6)}
-        .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-        h1{font-size:clamp(3.2rem,8vw,7rem);line-height:.94;letter-spacing:-.055em;max-width:1000px;margin:18px 0 25px}
-        .lead{font-size:1.18rem;max-width:720px}
-        .cta{display:inline-block;margin-top:22px;padding:13px 20px;border-radius:999px;background:var(--primary-color);color:#fff;text-decoration:none}
-        section{padding:90px 7%}
-        h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.04em}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:35px}
-        .card{background:#fff;border:1px solid #e6ded2;border-radius:24px;padding:26px}
-        .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
-        footer{padding:40px 7%;background:var(--primary-color);color:#fff}
-        .en{display:none}
-        .lang-en .el{display:none}
-        .lang-en .en{display:block}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ταβέρνα Αλέξανδρος | Παροικιά, Πάρος, Ελλάδα</title>
+<meta name="description" content="Αυθεντική ελληνική φιλοξενία στην Παροικιά της Πάρου. Δείτε το μενού, την τοποθεσία και επικοινωνήστε άμεσα.">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+    --clr-primary:#5a2e0c;
+    --clr-secondary:#fff5e1;
+    --clr-bg:#faf4e8;
+    --clr-accent:#c76c1d;
+    --font-heading:"Playfair Display",serif;
+    --font-body:"Inter",system-ui,sans-serif;
+    --radius:12px;
+    --transition:0.3s ease;
+}
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:var(--font-body);
+    background:var(--clr-bg);
+    color:var(--clr-primary);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+a:focus-visible{
+    outline:2px solid var(--clr-accent);
+    outline-offset:2px;
+}
+button{
+    font:inherit;
+    cursor:pointer;
+    background:none;
+    border:none;
+    color:inherit;
+}
+button:focus-visible{
+    outline:2px solid var(--clr-accent);
+    outline-offset:2px;
+}
+img,svg{
+    max-width:100%;
+    display:block;
+}
+header{
+    position:sticky;
+    top:0;
+    background:var(--clr-secondary);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(0,0,0,.05);
+    z-index:10;
+}
+nav{
+    max-width:1200px;
+    margin:0 auto;
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav .logo{
+    font-family:var(--font-heading);
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--clr-primary);
+}
+nav .lang-toggle{
+    font-weight:600;
+    background:var(--clr-primary);
+    color:#fff;
+    padding:.4rem .8rem;
+    border-radius:var(--radius);
+}
+main{
+    max-width:1200px;
+    margin:0 auto;
+}
+section{
+    padding:4rem 2rem;
+}
+h1,h2,h3{
+    font-family:var(--font-heading);
+    line-height:1.2;
+    margin-bottom:.5rem;
+}
+h1{
+    font-size:clamp(2.5rem,8vw,5rem);
+    color:var(--clr-primary);
+}
+h2{
+    font-size:clamp(2rem,6vw,3.5rem);
+    color:var(--clr-primary);
+}
+h3{
+    font-size:1.25rem;
+    color:var(--clr-primary);
+}
+p{
+    margin-bottom:1rem;
+}
+.cta{
+    display:inline-block;
+    background:var(--clr-primary);
+    color:#fff;
+    padding:.6rem 1.2rem;
+    border-radius:999px;
+    font-weight:600;
+    transition:background var(--transition);
+}
+.cta:hover,
+.cta:focus-visible{
+    background:var(--clr-accent);
+}
+.grid{
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.card{
+    background:#fff;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:var(--radius);
+    padding:1.5rem;
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+    transition:transform var(--transition);
+}
+.card:hover,
+.card:focus-within{
+    transform:translateY(-4px);
+}
+footer{
+    background:var(--clr-primary);
+    color:#fff;
+    text-align:center;
+    padding:2rem 1rem;
+    font-size:.9rem;
+}
+.wave{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+.wave svg{
+    width:200%;
+    height:auto;
+    transform:translateX(-25%);
+    opacity:.15;
+}
+@media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{
+        animation-duration:0.001ms!important;
+        transition-duration:0.001ms!important;
+    }
+    html{
+        scroll-behavior:auto;
+    }
+}
+</style>
 </head>
 <body>
+<a href="#main-content" class="sr-only">Skip to main content</a>
+<header>
     <nav>
-        <strong>Ταβέρνα Αλέξανδρος</strong>
-        <button id="lang">EN</button>
+        <div class="logo" aria-label="Ταβέρνα Αλέξανδρος">Ταβέρνα Αλέξανδρος</div>
+        <button id="langToggle" class="lang-toggle" aria-label="Change language">EN</button>
     </nav>
-    <section class="hero">
-        <div class="wrap">
-            <div class="eyebrow el">Ελληνική φιλοξενία · Παροικιά, Πάρος, Ελλάδα</div>
-            <div class="eyebrow en">Greek hospitality · Παροικιά, Πάρος, Ελλάδα</div>
+</header>
+<main id="main-content">
+    <section id="hero" class="hero" style="position:relative;overflow:hidden;">
+        <div class="wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="var(--clr-primary)" d="M0,64L48,85.3C96,107,192,149,288,176C384,203,480,213,576,197.3C672,181,768,139,864,122.7C960,107,1056,117,1152,138.7C1248,160,1344,192,1392,208L1440,224V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0H0Z"></path>
+            </svg>
+        </div>
+        <div class="wrap" style="position:relative;z-index:1;max-width:800px;margin:0 auto;text-align:center;">
+            <p class="eyebrow el" style="font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Ελληνική φιλοξενία · Παροικιά, Πάρος, Ελλάδα</p>
+            <p class="eyebrow en" style="font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;display:none;">Greek hospitality · Parikia, Paros, Greece</p>
             <h1 class="el">Γεύση που αξίζει να τη γνωρίσεις.</h1>
-            <h1 class="en">Taverna Alexandros</h1>
-            <p class="lead">Ισχυρή τουριστική ζήτηση στην Πάρο, παραθαλάσσια εμπειρία και ανάγκη να βρίσκουν οι επισκέπτες μενού, τοποθεσία και επικοινωνία από ένα σημείο.</p>
-            <a class="cta" href="#contact">Contact</a>
+            <h1 class="en" style="display:none;">Taverna Alexandros</h1>
+            <p class="lead el" style="margin-top:1rem;font-size:1.125rem;">Αυθεντική ελληνική κουζίνα στην καρδιά της Παροικιάς.</p>
+            <p class="lead en" style="display:none;margin-top:1rem;font-size:1.125rem;">Authentic Greek cuisine in the heart of Parikia.</p>
+            <a href="#contact" class="cta">Επικοινωνία</a>
         </div>
     </section>
-    <section>
+
+    <section id="about">
         <div class="wrap">
-            <div class="eyebrow el">Η εμπειρία</div>
-            <div class="eyebrow en">The experience</div>
-            <h2 class="el">Αυθεντική ταυτότητα. Σύγχρονη online παρουσία.</h2>
-            <h2 class="en">Authentic identity. A modern online presence.</h2>
+            <p class="eyebrow el">Η εμπειρία</p>
+            <p class="eyebrow en" style="display:none;">The experience</p>
+            <h2 class="el">Αυθεντική ταυτότητα. Σύγχρονη παρουσία.</h2>
+            <h2 class="en" style="display:none;">Authentic identity. Modern presence.</h2>
             <div class="grid">
                 <article class="card">
-                    <h3>Τοποθεσία</h3>
-                    <p>Εύκολη πρόσβαση και καθαρές πληροφορίες για τον επισκέπτη.</p>
+                    <h3 class="el">Τοποθεσία</h3>
+                    <h3 class="en" style="display:none;">Location</h3>
+                    <p class="el">Κοντά στη θάλασσα, εύκολη πρόσβαση για όλους.</p>
+                    <p class="en" style="display:none;">Close to the sea, easy access for everyone.</p>
                 </article>
                 <article class="card">
-                    <h3>Κουζίνα & εμπειρία</h3>
-                    <p>Παρουσίαση της ταυτότητας, των πιάτων και της ατμόσφαιρας.</p>
+                    <h3 class="el">Κουζίνα & εμπειρία</h3>
+                    <h3 class="en" style="display:none;">Cuisine & experience</h3>
+                    <p class="el">Παραδοσιακά πιάτα με σύγχρονη πινελιά.</p>
+                    <p class="en" style="display:none;">Traditional dishes with a modern twist.</p>
                 </article>
                 <article class="card">
-                    <h3>Για Έλληνες & ταξιδιώτες</h3>
-                    <p>Δίγλωσση εμπειρία για καλύτερη ανακάλυψη από κινητό.</p>
+                    <h3 class="el">Για Έλληνες & ταξιδιώτες</h3>
+                    <h3 class="en" style="display:none;">For locals & travelers</h3>
+                    <p class="el">Δίγλωσση εξυπηρέτηση για άνετη ανακάλυψη.</p>
+                    <p class="en" style="display:none;">Bilingual service for comfortable discovery.</p>
                 </article>
             </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="wrap">
-            <div class="eyebrow el">Επικοινωνία</div>
-            <div class="eyebrow en">Contact</div>
-            <h2 class="el">Θα χαρούμε να σας καλωσορίσουμε.</h2>
-            <h2 class="en">We look forward to welcoming you.</h2>
-            <div class="contact">
-                <div>
-                    <strong>Address</strong>
-                    <p>Παροικιά, Πάρος, Ελλάδα</p>
-                </div>
-                <div>
-                    <strong>Phone</strong>
-                    <p><a href="tel:2284024841">22840 24841</a></p>
-                </div>
-                <div>
-                    <strong>Email</strong>
-                    <p><a href="mailto:delskitchenparos@gmail.com">delskitchenparos@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section id="visit">
         <div class="wrap">
-            <div class="eyebrow el">Για την επόμενη έξοδό σου</div>
-            <div class="eyebrow en">For your next outing</div>
+            <p class="eyebrow el">Για την επόμενη έξοδό σου</p>
+            <p class="eyebrow en" style="display:none;">For your next outing</p>
             <h2 class="el">Έχεις λόγο να περάσεις από εδώ.</h2>
-            <h2 class="en">A good reason to make the stop.</h2>
-            <p class="lead el">Μια καλή έξοδος ξεκινά με εύκολη πρόσβαση και ξεκάθαρες πληροφορίες. Δες το σημείο και έλα να μας γνωρίσεις.</p>
-            <p class="lead en">A good outing starts with an easy route and clear information. Find the location and come experience it.</p>
+            <h2 class="en" style="display:none;">A good reason to stop by.</h2>
+            <p class="lead el">Μια καλή έξοδος ξεκινά με εύκολη πρόσβαση και ξεκάθαρες πληροφορίες.</p>
+            <p class="lead en" style="display:none;">A good outing starts with easy access and clear information.</p>
             <div class="grid">
                 <article class="card">
                     <h3 class="el">Βρες τη διαδρομή</h3>
-                    <h3 class="en">Find the way</h3>
+                    <h3 class="en" style="display:none;">Find the way</h3>
                     <p class="el">Άνοιξε το Google Maps και δες πώς θα έρθεις.</p>
-                    <p class="en">Open Google Maps and get directions.</p>
+                    <p class="en" style="display:none;">Open Google Maps for directions.</p>
                     <a class="cta" href="https://www.google.com/maps/search/?api=1&query=Taverna+Alexandros+Parikia+Paros+Greece" target="_blank" rel="noopener">Google Maps</a>
-                </article>
-                <article class="card">
-                    <h3 class="el">Θες περισσότερα;</h3>
-                    <h3 class="en">Want to know more?</h3>
-                    <p class="el">Επικοινώνησε απευθείας με την επιχείρηση.</p>
-                    <p class="en">Contact the business directly.</p>
-                    <a class="cta" href="tel:2284024841">22840 24841</a>
-                </article>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="wrap">Ταβέρνα Αλέξανδρος · Παροικιά, Πάρος, Ελλάδα</div>
-    </footer>
-    <script>
-        const body=document.body, btn=document.getElementById('lang');
-        btn.onclick=()=>{body.classList.toggle('lang-en');btn.textContent=body.classList.contains('lang-en')?'GR':'EN'};
-    </script>
-</body>
-</html>
+                </article><footer style="padding:2rem 6vw;border-top:1px solid #ddd;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:600 .75rem system-ui;letter-spacing:.08em;text-transform:uppercase"><span>Taverna Alexandros Paros</span><span>© 2026</span></footer></body></html>
